@@ -11,9 +11,9 @@ var storyText = 'It was 94 fahrenheit outside, so :insertx: went for a walk. Whe
 
 var insertX =["Willy the Goblin", "Big Daddy", "Father Christmas"]
 
-var insertY =["the soup kitchen", "Disneyland", "the White House"]
+var insertY =["the soup kitchen", "Disneyland", "the White House", "Denny's", "Wakanda"]
 
-var insertZ =["spontaneosly combusted", "melted into a puddle on the sidewalk", "turned into a slug and crawled away"]
+var insertZ =["spontaneosly combusted", "melted into a puddle on the sidewalk", "turned into a slug and crawled away", "fell from a high place", "was impaled on a stalagmite whilst fighting a fish"]
 
 randomize.addEventListener('click', result);
 
@@ -24,6 +24,11 @@ var newStory = storyText
 var xItem = randomValueFromArray()
 var yItem = randomValueFromArray()
 var zItem = randomValueFromArray()
+
+newStory = newStory.replace(":insertx:", xItem);
+newStory = newStory.replace(":insertx:", xItem);
+newStory = newStory.replace(":inserty:", yItem);
+newStory = newStory.replace(":insertz:", zItem);
 
 if(customName.value !== '') {
     const name = customName.value;
