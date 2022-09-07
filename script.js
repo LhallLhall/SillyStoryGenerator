@@ -19,6 +19,12 @@ randomize.addEventListener('click', result);
 
 function result() {
 
+var newStory = storyText
+
+var xItem = randomValueFromArray()
+var yItem = randomValueFromArray()
+var zItem = randomValueFromArray()
+
 if(customName.value !== '') {
     const name = customName.value;
 
@@ -30,6 +36,6 @@ if(document.getElementById("uk").checked) {
 
 }
 
-story.textContent = ;
+story.textContent = 
 story.style.visibility = 'visible';
 }
