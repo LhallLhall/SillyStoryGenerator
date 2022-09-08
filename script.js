@@ -19,29 +19,29 @@ randomize.addEventListener('click', result);
 
 function result() {
 
-var newStory = storyText
+    var newStory = storyText
 
-var xItem = randomValueFromArray()
-var yItem = randomValueFromArray()
-var zItem = randomValueFromArray()
+    var xItem = randomValueFromArray(insertX)
+    var yItem = randomValueFromArray(insertY)
+    var zItem = randomValueFromArray(insertZ)
 
-newStory = newStory.replace(":insertx:", xItem);
-newStory = newStory.replace(":insertx:", xItem);
-newStory = newStory.replace(":inserty:", yItem);
-newStory = newStory.replace(":insertz:", zItem);
+    // newStory = newStory.replace(":insertx:", xItem);
+    newStory = newStory.replaceAll(":insertx:", xItem);
+    newStory = newStory.replace(":inserty:", yItem);
+    newStory = newStory.replace(":insertz:", zItem);
 
-if(customName.value !== '') {
-    const name = customName.value;
-    newStory = newStory.replace("bob", name)
-}
+    if(customName.value !== '') {
+        const name = customName.value;
+        newStory = newStory.replace("bob", name)
+    }
 
-if(document.getElementById("uk").checked) {
-    const weight = Math.round(300) + " stone";
-    const temperature =  Math.round(94) + ' centigrade';
-    newStory = newStory.replace("300 pounds", weight)
-    newStory = newStory.replace("94 fahrenheit", temperature)
-}
+    if(document.getElementById("uk").checked) {
+        const weight = Math.round(300) + " stone";
+        const temperature =  Math.round(94) + ' centigrade';
+        newStory = newStory.replace("300 pounds", weight)
+        newStory = newStory.replace("94 fahrenheit", temperature)
+    }
 
-story.textContent = newStory
-story.style.visibility = 'visible';
+    story.textContent = newStory
+    story.style.visibility = 'visible';
 }
