@@ -13,7 +13,7 @@ var insertX =["Willy the Goblin", "Big Daddy", "Father Christmas", "Gandalf", "B
 
 var insertY =["the soup kitchen", "Disneyland", "the White House", "Denny's", "Wakanda"]
 
-var insertZ =["spontaneosly combusted", "melted into a puddle on the sidewalk", "turned into a slug and crawled away", "fell from a high place", "was impaled on a stalagmite whilst fighting a fish"]
+var insertZ =["spontaneosly combusted", "melted into a puddle on the sidewalk", "turned into a slug and crawled away", "fell from a high place", ]
 
 randomize.addEventListener('click', result);
 
@@ -40,6 +40,15 @@ function result() {
         const temperature =  Math.round(94) + ' centigrade';
         newStory = newStory.replace("300 pounds", weight)
         newStory = newStory.replace("94 fahrenheit", temperature)
+    }
+    
+    if(document.getElementById("insane").checked) {
+        // const weight = Math.round(300) + " stone";
+        // const temperature =  Math.round(94) + ' centigrade';
+        newStory = newStory.replace("weighs 300 pounds", "weighs as much as a black hole")
+        newStory = newStory.replace("It was 94 fahrenheit", "It was as hot as 2 suns")
+        // newStory = newStory.replace("It was ", "It was as hot as ")
+        // newStory = newStory.replace("weighs", "weighs as much as")
     }
 
     story.textContent = newStory
