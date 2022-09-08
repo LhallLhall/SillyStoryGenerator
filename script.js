@@ -32,15 +32,16 @@ newStory = newStory.replace(":insertz:", zItem);
 
 if(customName.value !== '') {
     const name = customName.value;
-
+    newStory = newStory.replace("bob", name)
 }
 
 if(document.getElementById("uk").checked) {
-    const weight = Math.round(300);
-    const temperature =  Math.round(94);
-
+    const weight = Math.round(300) + " stone";
+    const temperature =  Math.round(94) + ' centigrade';
+newStory = newStory.replace("300 pounds", weight)
+newStory = newStory.replace("94 fahrenheit", temperature)
 }
 
-story.textContent = 
+story.textContent = newStory
 story.style.visibility = 'visible';
 }
